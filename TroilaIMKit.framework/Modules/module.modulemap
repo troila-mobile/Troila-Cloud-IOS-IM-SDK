@@ -1,0 +1,6 @@
+framework module TroilaIMKit {
+  umbrella header "TroilaIMKit.h"
+
+  export *
+  module * { export * }
+}
