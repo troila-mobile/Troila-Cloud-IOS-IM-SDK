@@ -15,7 +15,7 @@ TroilaCloud IM SDK for iOS
   s.subspec 'IMLib' do |lib|
   lib.vendored_frameworks = 'TroilaIMLib.framework'
   lib.dependency "!ProtoCompiler-gRPCPlugin", "~> 1.0"
-  lib.dependency "Realm"
+  lib.dependency "Realm", "~> 1.10"
   lib.dependency "AFNetworking"
   end
 
