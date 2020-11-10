@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TroilaCloudIM"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "TroilaCloud IM SDK"
   s.description  = <<-DESC
 TroilaCloud IM SDK for iOS
