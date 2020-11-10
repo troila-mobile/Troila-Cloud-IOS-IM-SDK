@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TroilaCloudIM"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "TroilaCloud IM SDK"
   s.description  = <<-DESC
 TroilaCloud IM SDK for iOS
@@ -15,7 +15,7 @@ TroilaCloud IM SDK for iOS
   s.subspec 'IMLib' do |lib|
   lib.vendored_frameworks = 'TroilaIMLib.framework'
   lib.dependency "!ProtoCompiler-gRPCPlugin", "~> 1.0"
-  lib.dependency "Realm", "~> 1.10"
+  lib.dependency "Realm"
   lib.dependency "AFNetworking"
   end
 
