@@ -104,7 +104,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @discussion 您可以通过此方法，获取IMKit的单例，访问对象中的属性和方法。
  */
-+ (instancetype)sharedRCIM;
++ (instancetype)sharedTCIM;
 
 #pragma mark - SDK初始化
 
@@ -127,6 +127,13 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)connectWithToken:(NSString *)token userId:(NSString *)userId success:(void (^)(NSString *userId))successBlock error:(void (^)(NSError *error))errorBlock;
 
+/*!
+ 
+断开与卓朗服务器的连接
+*/
+- (void)disconnect;
+
+
 @property (nonatomic, weak) id<TCIMUserInfoDataSource> userInfoDataSource;
 
 @property (nonatomic, weak) id<TCIMGroupInfoDataSource> groupInfoDataSource;
@@ -144,13 +151,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)groupInfoChange:(TCGroupInfo *)groupInfo;
 
-- (TCUserInfo *)queryUserInfo:(NSString *)userId;
+- (TCUserInfo *)getUserInfoCache:(NSString *)userId;
 
-- (TCGroupInfo *)queryGroupInfo:(NSString *)groupId;
+- (TCGroupInfo *)getGroupInfoCache:(NSString *)groupId;
 
-- (void)updateUserInfo:(NSString *)userId;
+- (void)refreshUserInfoCache:(NSString *)userId;
 
-- (void)updateGroupInfo:(NSString *)groupId;
+- (void)refreshGroupInfoCache:(NSString *)groupId;
 
 - (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(TCUserInfo *userInfo))completion;
 

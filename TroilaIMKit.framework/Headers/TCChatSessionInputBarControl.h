@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol TCChatSessionInputBarControlDelegate <NSObject>
 - (void)showChooseUserViewController:(void (^)(TCUserInfo *selectedUserInfo))selectedBlock cancel:(void (^)(void))cancelBlock;
+- (void)inputTextView:(UITextView *)inputTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text;
+- (TCMessageContent *)willSendMessage:(TCMessageContent *)messageContent;
+- (void)didSendMessage:(NSInteger)status content:(TCMessageContent *)messageContent;
 @end
 
 

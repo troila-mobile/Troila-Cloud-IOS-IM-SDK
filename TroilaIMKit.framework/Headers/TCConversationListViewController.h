@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TCConversationModel.h"
 #import "TCConversationViewController.h"
+#import "TCConversationCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onSelectedTableRow:(TCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath;
 
 - (TCConversationViewController *)contextMenuConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath model:(TCConversationModel *)model;
+
+- (void)onReceivedNotification:(nonnull TCNotificationType)notificationType tcMessage:(nonnull TCMessage *)tcMessage tcMessages:(nonnull NSArray<TCMessage *> *)tcMessages messageId:(nonnull NSString *)messageId targetId:(nonnull NSString *)targetId conversationType:(nonnull TCConversationType)conversationType;
+
+- (void)didDeleteConversationCell:(TCConversationModel *)model;
+
+- (NSMutableArray *)willReloadTableData:(NSMutableArray *)dataSource;
+
+- (void)willDisplayConversationTableCell:(TCConversationCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
