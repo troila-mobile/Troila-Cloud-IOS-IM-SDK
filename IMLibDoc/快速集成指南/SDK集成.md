@@ -32,7 +32,7 @@ pod 'TroilaCloudIM/IMLib'
 [[TCIMClient sharedTCIMClient] initWithAppKey:Your Appkey];
 ```
 
-# 连接融云
+# 连接卓朗云
 
 1. `Token` 即用户令牌，相当于您 APP 上当前用户连接卓朗云的身份凭证。`UserId` 即用户ID，相当于您 APP 上当前用户连接卓朗云的用户ID。在您连接卓朗云服务器之前，您需要请求您的 App Server，您的 App Server 通过卓朗云 Server API 获取 `Token` 和 `UserId`并返回给您的客户端，客户端获取到 `Token` 和 `UserId` 即可连接卓朗云服务器。
 2. `success` 即连接成功回调，会返回 `Token` 对应的 UserId。
